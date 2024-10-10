@@ -1,5 +1,5 @@
-using EcommerceWebApp.Data;
 using Microsoft.EntityFrameworkCore;
+using ProShop.DataAccess.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

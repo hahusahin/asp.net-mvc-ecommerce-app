@@ -1,7 +1,7 @@
-﻿using EcommerceWebApp.Models;
+﻿using ProShop.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace EcommerceWebApp.Data
+namespace ProShop.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {

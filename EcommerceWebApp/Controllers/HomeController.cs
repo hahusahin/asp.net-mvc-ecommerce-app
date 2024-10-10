@@ -1,8 +1,8 @@
-using EcommerceWebApp.Models;
+using ProShop.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace EcommerceWebApp.Controllers
+namespace ProShop.Controllers
 {
     public class HomeController : Controller
     {

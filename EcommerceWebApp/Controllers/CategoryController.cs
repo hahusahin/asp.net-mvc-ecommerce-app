@@ -1,9 +1,9 @@
-﻿using EcommerceWebApp.Data;
-using EcommerceWebApp.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ProShop.DataAccess.Data;
+using ProShop.Models;
 
-namespace EcommerceWebApp.Controllers
+namespace ProShop.Controllers
 {
     public class CategoryController : Controller
     {

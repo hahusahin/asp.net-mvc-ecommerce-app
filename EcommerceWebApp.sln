@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProShop", "EcommerceWebApp\ProShop.csproj", "{E494D6FF-3080-40E2-9470-B96A716A900A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProShopWeb", "EcommerceWebApp\ProShopWeb.csproj", "{E494D6FF-3080-40E2-9470-B96A716A900A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProShop.DataAccess", "ProShop.DataAccess\ProShop.DataAccess.csproj", "{1CDA391E-A863-454D-B830-3032A747269B}"
 EndProject

@@ -1,4 +1,4 @@
-namespace EcommerceWebApp.Models
+namespace ProShop.Models
 {
     public class ErrorViewModel
     {
