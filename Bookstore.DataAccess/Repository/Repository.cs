@@ -26,15 +26,19 @@ namespace BookStore.DataAccess.Repository
             _dbSet.Add(entity);
         }
 
-        public T Get(Expression<Func<T, bool>> filter)
+        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
-            IQueryable<T> query = _dbSet.Where(filter);
+            IQueryable<T> query = _dbSet;
+            query = query.Where(filter);
+            query = ApplyIncludes(query, includeProperties);
             return query.FirstOrDefault();
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(string? includeProperties = null)
         {
-            return _dbSet.ToList();
+            IQueryable<T> query = _dbSet;
+            query = ApplyIncludes(query, includeProperties);
+            return query.ToList();
         }
 
         public void Remove(T entity)
@@ -45,6 +49,18 @@ namespace BookStore.DataAccess.Repository
         public void RemoveRange(IEnumerable<T> entities)
         {
             _dbSet.RemoveRange(entities);
+        }
+
+        private IQueryable<T> ApplyIncludes (IQueryable<T> query, string? includeProperties)
+        {
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var property in includeProperties.Split(",", StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(property);
+                }
+            }
+            return query;
         }
     }
 }
